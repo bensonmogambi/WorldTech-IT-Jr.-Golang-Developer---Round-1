@@ -1,0 +1,11 @@
+##Key Error Fixes and Comments:
+Proper Error Handling for File Reading: Added error handling for reading the file to ensure the program exits if the file can't be read.
+Synchronization for Goroutines: Used a sync.WaitGroup to wait for all goroutines to finish, ensuring the program does not exit prematurely.
+Channel for Errors: Introduced an error channel to capture and log errors from goroutines.
+Handling Loop Variable: Correctly passed the loop variable to the anonymous function to avoid capturing the loop variable incorrectly.
+JSON Unmarshaling Errors: Added error handling for JSON unmarshaling to return an error if the input line cannot be parsed.
+Context Utilization: Passed a cancellable context to the getData function to handle request cancellation.
+Closing HTTP Response Body: Ensured that the response body is properly closed after reading to avoid resource leaks.
+Correct JSON Tag: Used the correct JSON tag in the payload struct to match the expected JSON format.
+Shared HTTP Client: Used a shared HTTP client for better performance and to avoid creating a new client for each request.
+Channel for Found Data: Used a channel to handle the discovery of the "foo" data and cancel all goroutines once found.
