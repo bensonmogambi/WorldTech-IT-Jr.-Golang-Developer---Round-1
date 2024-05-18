@@ -1,4 +1,5 @@
-##Key Error Fixes and Comments:
+**'Key Error Fixes and Comments;'**
+
 Proper Error Handling for File Reading: Added error handling for reading the file to ensure the program exits if the file can't be read.
 Synchronization for Goroutines: Used a sync.WaitGroup to wait for all goroutines to finish, ensuring the program does not exit prematurely.
 Channel for Errors: Introduced an error channel to capture and log errors from goroutines.
